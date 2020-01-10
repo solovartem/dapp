@@ -1,18 +1,22 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.1;
 
 contract MyContract {
     
- string value;
+ enum Operations { Sum, Minus}
+ Operations internal operations;
  
- constructor() public{
-     value = "some_value";
+ function activeSum() public {
+     operations = Operations.Sum;
  }
  
- function getValue() public view returns(string) {
-     return value;
+ function activeMinus() public {
+     operations = Operations.Minus;
  }
  
- function setValue(string _value) public {
-     value = _value;
+ function calculate(int a, int b) public view returns(int) {
+     if (operations == Operations.Sum) 
+        return a + b;    
+     return a - b; 
  }
+ 
 }
