@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/haxul/dapp/issues"
   },
-  "homepage": "https://github.com/haxul/dapp#readme"
+  "homepage": "https://github.com/haxul/dapp#readme",
+  "dependencies": {
+    "web3": "^1.2.5-rc.0"
+  }
 }
