@@ -4,7 +4,8 @@
   "description": "Ethereum decentralized application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "tsc ./web3/transaction.ts --outDir ./web3/dist/ && node ./web3/dist/transaction.js"
   },
   "repository": {
     "type": "git",
