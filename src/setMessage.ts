@@ -21,9 +21,9 @@
     data: smartContract.methods.setMessage("hello blockchain").encodeABI()
   }
 
-  // const signedTx = await decryptedPrivateKey.signTransaction(rawTransaction)
-  // const result = await tryCatch(web3.eth.sendSignedTransaction, signedTx.rawTransaction)
-  // console.log(result)
+  const signedTx = await decryptedPrivateKey.signTransaction(rawTransaction)
+  const result = await tryCatch(web3.eth.sendSignedTransaction, signedTx.rawTransaction)
+  console.log(result)
 
   // console.log(await smartContract.methods.getMessage().call())
 })()
