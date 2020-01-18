@@ -4,8 +4,9 @@
   "description": "Ethereum decentralized application.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/tx.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "make": "tsc ./web3/transaction.ts --outDir ./web3/dist/ --target ESNext && node ./web3/dist/transaction.js"
+    "make": "tsc ./web3/tx.ts --outDir ./web3/dist/ --target ESNext && node ./web3/dist/tx.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "homepage": "https://github.com/haxul/dapp#readme",
   "dependencies": {
     "ethereumjs-tx": "^2.1.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5",
     "web3": "^1.2.5-rc.0"
   }
 }
