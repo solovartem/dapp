@@ -4,7 +4,7 @@
   "description": "Ethereum decentralized application.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/setMessage.ts",
+    "dev": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "make": "tsc ./web3/tx.ts --outDir ./web3/dist/ --target ESNext && node ./web3/dist/tx.js"
   },
@@ -20,6 +20,9 @@
   "homepage": "https://github.com/haxul/dapp#readme",
   "dependencies": {
     "ethereumjs-tx": "^2.1.2",
+    "ganache-cli": "^6.8.2",
+    "mocha": "^7.0.0",
+    "solc": "^0.5.12",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
     "web3": "^1.2.5-rc.0"
