@@ -2,7 +2,7 @@ const Tx = require("ethereumjs-tx").Transaction
 const Web3 = require("web3")
 const web3 = new Web3("https://rinkeby.infura.io/v3/d1d21a61b32a4f669b1438e9218cc279")
 
-interface Transaction {
+export interface Transaction {
   nonce: string
   gasLimit: string
   gasPrice: string
@@ -16,6 +16,8 @@ const tryCatch = async (f, x) => {
     console.warn(error)
   }
 }
+export tryCatch
+
 const createContract = async () => {
   const account = "0x09893Aad261abE088c0fB516990b66D08c2F05f9"
   const privateAccountString = "CCBF88AC64D9755A5CC5298E201920262DA425094C08F95D2ABA0E69AEEFFC92"
