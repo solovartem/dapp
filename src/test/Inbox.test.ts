@@ -1,3 +1,3 @@
 const ganache = require("ganache-cli")
 const assert = require("assert")
-const mocha = require("mocha")
+const Web3 = require("web3")
